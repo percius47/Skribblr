@@ -1,6 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
-import Welcome from "./pages/Welcome";
+
 import PageRoutes from "./routes/PageRoutes";
 
 
