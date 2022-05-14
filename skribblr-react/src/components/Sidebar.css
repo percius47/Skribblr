@@ -1,0 +1,87 @@
+aside {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+    height: 100%;
+  }
+  
+  aside a {
+    display: inline-block;
+    width: 100%;
+    border-radius: var(--border-radius);
+  }
+  
+  aside a.active {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  aside a,
+  aside .profile {
+    margin: 0.5rem;
+    padding: 0.25rem;
+  }
+  
+  aside i {
+    margin-right: 0.5rem;
+  }
+  
+  aside button {
+    margin: 0.75rem;
+    width: 100%;
+  }
+  
+  aside .profile {
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  aside .username {
+    padding-left: 0.5rem;
+  }
+  
+  @media screen and (max-width: 650px) {
+    aside {
+      position: fixed;
+      bottom: 0;
+      padding: 0.5rem 0.25rem;
+      margin-top: 2rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: max-content;
+      width: 100vw;
+      background-color: var(--bg-color);
+      z-index: 2;
+    }
+  
+    aside ul {
+      display: flex;
+    }
+  
+    aside a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0.25rem;
+      font-size: 0.9rem;
+    }
+  
+    aside i {
+      margin: 0;
+    }
+  
+    aside .profile {
+      width: max-content;
+    }
+  
+    aside .profile .username {
+      display: none;
+    }
+  }
+  

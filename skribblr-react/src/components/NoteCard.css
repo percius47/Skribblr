@@ -1,0 +1,107 @@
+.note-card {
+    cursor: pointer;
+    max-width: 100%;
+    height: max-content;
+    margin: 0.5rem 0;
+    background-color: var(--bg-app);
+  }
+  
+  .note-card:hover {
+    box-shadow: var(--box-shadow);
+  }
+  
+  .note-card:active {
+    transform: scale(0.98);
+    z-index: 1;
+  }
+  
+  .note-card .card-body {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+  }
+  
+  .note-card .card-text > * {
+    word-break: break-all;
+    padding-right: 0;
+  }
+  
+  .note-card .card-label {
+    width: max-content;
+    margin: 0.75rem 0.75rem 0;
+    padding: 0.2rem 0.4rem;
+    background-color: var(--primary-disabled);
+    border-radius: 1.2rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+  
+  .note-card.card-w-badge .card-badge {
+    all: unset;
+    margin: 0.75rem 0.75rem 0 0;
+    padding: 0.1rem;
+    font-size: 0.7rem;
+    height: max-content;
+    color: var(--text-secondary);
+    border: 1px solid var(--text-color);
+    border-radius: var(--border-radius);
+  }
+  
+  .note-card .card-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .note-card .card-action > * {
+    font-size: 0.8rem;
+  }
+  
+  .note-card .card-time {
+    color: var(--status-offline);
+  }
+  
+  .note-card .card-icons i,
+  .note-card .card-badge i {
+    margin: 0 0.35rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: var(--status-offline);
+  }
+  
+  .note-card .card-icons i:hover,
+  .note-card .card-badge i:hover {
+    background-color: var(--bg-secondary);
+  }
+  
+  .note-card .card-icons i > *,
+  .note-card .card-badge i > * {
+    font-size: 1.2rem;
+  }
+  
+  .note-card .color-pallete-wrapper,
+  .note-card .priority-field-wrapper {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .note-card .card-content p img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 450px) {
+    .note-card .card-action {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  
+    .note-card .card-time {
+      margin: 0 0 0.25rem 0.25rem;
+    }
+  
+    .note-card .card-icons i {
+      margin: 0 0.5rem 0 0;
+    }
+  }
+  

@@ -5,3 +5,9 @@
 button:hover{
 cursor: pointer;
 }
+.main-section{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    color: var(--text-color);
+}

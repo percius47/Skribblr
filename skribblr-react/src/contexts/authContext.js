@@ -33,6 +33,7 @@ const AuthProvider = ({ children }) => {
   });  
 
   const [loading, setLoading] = useState(false);
+  const [user,setUser]=useState("");
 
   const signupInputHandler = (e) => {
     const { name, value } = e.target;
@@ -59,7 +60,7 @@ try {
   toast.success(`Hi, ${data.createdUser.username}!`, {
     icon: "👋"
   });
-
+  setUser(data.createdUser.username);
   localStorage.setItem("isAuth", true);
   localStorage.setItem("token", data.encodedToken);
   setToken(data.encodedToken);
@@ -67,7 +68,7 @@ try {
   setIsAuth(true);
   setSignup({ ...signup, input: "" });
 
-  navigate("/home");
+  navigate("/");
 } catch (err) {
     console.log("error",err);
   // setLoading(false);
@@ -94,7 +95,8 @@ try {
       localStorage.setItem("isAuth", true);
       localStorage.setItem("token", data.encodedToken);
       setToken(data.encodedToken);
-
+      console.log("context",data.foundUser.username);
+      setUser(data.foundUser.username);
       setLogin({ ...login, input: { email: "", password: "" } });
       setIsAuth(true);
 
@@ -117,6 +119,7 @@ try {
   return (
     <AuthContext.Provider
       value={{
+        user,
         isAuth,
         setIsAuth,
         token,

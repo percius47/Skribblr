@@ -13,11 +13,17 @@
 }
 .nav{
   height: 3rem !important;
+  justify-content: space-between !important;
 }
-.nav-logo a, h1{
+.logo-title {
   font-weight: 300;
   margin: auto;
   margin-left: 1rem;
   color: white;
   text-decoration: none;
+}
+
+.add-notes{
+  color: white;
+  padding: 1rem;
 }
