@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://windui.netlify.app/wind.css');
+
+
+:root{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  --primary-color:#102B3F;
+    --secondary-blue:#0C00CB;
+    font-family: 'Quicksand', sans-serif;
+}
+.nav{
+  height: 3rem !important;
+  justify-content: space-between !important;
+}
+.logo-title {
+  font-weight: 300;
+  margin: auto;
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.add-notes{
+  color: white;
+  padding: 1rem;
+}

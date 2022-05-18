@@ -1,0 +1,18 @@
+.home-nav{
+    background-color: var(--primary-color);
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-link{
+    display: flex;
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
+}
+.menu-icon{
+    cursor: pointer;
+    color: white;
+    padding:  1rem;
+}
