@@ -1,8 +1,8 @@
 .color-palette {
     position: absolute;
-    bottom: -3.5rem;
+    bottom: -3rem;
     left: -0.5rem;
-    background-color: var(--bg-app);
+    background-color:whitesmoke;
     border-radius: var(--border-radius);
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    border: 1px solid var(--text-secondary);
+    border: 1px solid gray;
     margin: 0.25rem;
     padding: 0;
   }

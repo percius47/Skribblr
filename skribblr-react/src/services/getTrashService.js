@@ -5,3 +5,4 @@ const getTrashService = (token) => {
 };
 
 export { getTrashService };
+ 

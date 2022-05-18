@@ -108,7 +108,7 @@ const NoteCard = ({ note }) => {
                   onClick={(e) => unArchiveNote(e, note)}
                 />
               ) : (
-                <ArchiveIcon onClick={(e) => archiveNote(e, note)} />
+                <ArchiveIcon  onClick={(e) => archiveNote(e, note)} />
               )}
             </i>
           )}

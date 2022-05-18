@@ -3,10 +3,17 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: red; */
+
     height: 100%;
   }
-  
+  li{
+    list-style-type: none;
+   
+
+  }
+  li span{
+   margin: auto;
+  }
   aside a {
     display: inline-block;
     width: 100%;
@@ -15,7 +22,7 @@ aside {
   
   aside a.active {
     font-weight: bold;
-    color: var(--primary-color);
+font-size: 1.2rem;
   }
   
   aside a,
@@ -24,8 +31,10 @@ aside {
     padding: 0.25rem;
   }
   
-  aside i {
+  aside .sidebar-icons {
+    margin: auto;
     margin-right: 0.5rem;
+
   }
   
   aside button {
@@ -34,18 +43,51 @@ aside {
   }
   
   aside .profile {
-    width: 100%;
+  
     font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
+    padding:  0.25rem;
   }
   
-  aside .username {
-    padding-left: 0.5rem;
+  /* navbar icons */
+  .mobile-nav{
+    visibility: hidden;
+
   }
+
+/* mobile screen */
   
   @media screen and (max-width: 650px) {
+   
+    .mobile-nav{
+      visibility: visible;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0  0.5rem;
+
+    }
+    .mobile-nav-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0.25rem;
+      font-size: 0.9rem;
+      padding: 0.5rem ;
+     
+    }
+  
+    .nav-modal{
+      position:fixed;  
+      width: 40%;    
+      top: 20%;
+      left: 25%;
+    }
+    .nav-modal button{
+      width: fit-content;
+    }
     aside {
       position: fixed;
       bottom: 0;
@@ -53,10 +95,11 @@ aside {
       margin-top: 2rem;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      /* justify-content: space-between; */
       height: max-content;
       width: 100vw;
-      background-color: var(--bg-color);
+      color: white;
+      background-color: var(--primary-color);
       z-index: 2;
     }
   
@@ -70,18 +113,25 @@ aside {
       align-items: center;
       margin: 0 0.25rem;
       font-size: 0.9rem;
+      padding: 0.5rem ;
     }
   
-    aside i {
+    aside .sidebar-icons {
       margin: 0;
     }
   
     aside .profile {
-      width: max-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0.25rem;
+      font-size: 0.9rem;
+      padding: 0.5rem ;
     }
-  
-    aside .profile .username {
-      display: none;
-    }
+  .user-icon{
+    padding: 0 0.25rem ;
+  }
+   
   }
   
+ 

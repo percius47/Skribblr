@@ -10,9 +10,9 @@ import { NoteCard } from "./NoteCard";
 const NoteListing = ({ notes }) => {
   const { notesOrder, searchVal } = useNotes();
 
-  const searhedNotes = useSearchedNotes(notes, searchVal);
+  const searchedNotes = useSearchedNotes(notes, searchVal);
 
-  const sortedByDate = getNotesByDate(searhedNotes, notesOrder.sort);
+  const sortedByDate = getNotesByDate(searchedNotes, notesOrder.sort);
   const sortedByPriority = getNotesByPrioritySort(
     sortedByDate,
     notesOrder.sort
@@ -25,10 +25,15 @@ const NoteListing = ({ notes }) => {
 
   return (
     <div>
+      
       <div className="notes-wrapper">
-        {filteredNotes?.length > 0 ? (
-          filteredNotes?.map((unPinnedNote) => {
+       
+        {filteredNotes.length > 0 ? (
+         
+          filteredNotes.map((unPinnedNote) => {
+          
             return <NoteCard note={unPinnedNote} key={unPinnedNote._id} />;
+            
           })
         ) : (
           <p className="text-center">We don't have any notes to show here.</p>

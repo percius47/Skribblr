@@ -28,7 +28,7 @@ const RichTextEditor = ({ value, setValue }) => {
       formats={formats}
       value={value}
       onChange={setValue}
-      placeholder="Take a note..."
+      placeholder="Note.."
     />
   );
 };

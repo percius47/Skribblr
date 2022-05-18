@@ -9,8 +9,10 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import { PrivateRoute } from './PrivateRoutes'
-import Archive from '@mui/icons-material/Archive'
+
 import { Trash } from '../pages/Trash'
+import { Label } from '../pages/Label'
+import { Archive } from '../pages/Archive'
 function PageRoutes() {
   const { isAuth } = useAuth();
   return (
@@ -44,7 +46,7 @@ function PageRoutes() {
               path="/label"
               element={
                 <PrivateRoute>
-                  {/* <Label /> */}
+                  <Label />
                 </PrivateRoute>
               }
             ></Route>
@@ -66,7 +68,7 @@ function PageRoutes() {
             ></Route>
           </Routes>
         </section>
-        <Footer/>
+    
       </div>
     )}
   </div>

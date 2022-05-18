@@ -32,6 +32,7 @@ export const getAllArchivedNotesHandler = function (schema, request) {
 
 export const deleteFromArchivesHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
+  console.log("archive user",user);
   if (!user) {
     return new Response(
       404,
@@ -69,4 +70,61 @@ export const restoreFromArchivesHandler = function (schema, request) {
   user.notes.push({ ...restoredNote });
   this.db.users.update({ _id: user._id }, user);
   return new Response(200, {}, { archives: user.archives, notes: user.notes });
+};
+
+export const updateArchiveNoteHandler = function (schema, request) {
+  const user = requiresAuth.call(this, request);
+  try {
+    if (!user) {
+      new Response(
+        404,
+        {},
+        {
+          errors: ["The email you entered is not Registered. Not Found error"],
+        }
+      );
+    }
+    const { note } = JSON.parse(request.requestBody);
+    const { noteId } = request.params;
+    const noteIndex = user.archives.findIndex((note) => note._id === noteId);
+    user.archives[noteIndex] = { ...user.archives[noteIndex], ...note };
+    this.db.users.update({ _id: user._id }, user);
+    return new Response(
+      201,
+      {},
+      { archives: user.archives, notes: user.notes }
+    );
+  } catch (error) {
+    return new Response(
+      500,
+      {},
+      {
+        error,
+      }
+    );
+  }
+};
+
+/**
+ * This handler handles trashing the archived notes to user notes.
+ * send POST Request at /api/archives/trash/:noteId
+ * */
+
+export const trashFromArchivesHandler = function (schema, request) {
+  const user = requiresAuth.call(this, request);
+  if (!user) {
+    new Response(
+      404,
+      {},
+      {
+        errors: ["The email you entered is not Registered. Not Found error"],
+      }
+    );
+  }
+  const { noteId } = request.params;
+  const trashedNote = user.archives.filter((note) => note._id === noteId)[0];
+  user.archives = user.archives.filter((note) => note._id !== noteId);
+  user.trash.push({ ...trashedNote });
+  this.db.users.update({ _id: user._id }, user);
+  return new Response(200, {}, { archives: user.archives, trash: user.trash });
 };

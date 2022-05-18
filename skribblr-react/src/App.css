@@ -5,9 +5,16 @@
 button:hover{
 cursor: pointer;
 }
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .main-section{
     flex-grow: 1;
+    /* background-color: red; */
     display: grid;
     grid-template-columns: 12rem 1fr;
     color: var(--text-color);
+    margin-bottom: 3rem;
 }
