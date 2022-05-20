@@ -9,7 +9,7 @@ const colorData = [
   },
   {
     id: 2,
-    color: "#f3f3f3",
+    color: "#ccedfa",
    
   },
   {

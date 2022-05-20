@@ -3,15 +3,13 @@
     max-width: 100%;
     height: max-content;
     margin: 0.5rem 0;
-    background-color: var(--bg-app);
+
   }
   
-  .note-card:hover {
-    box-shadow: var(--box-shadow);
-  }
+
   
   .note-card:active {
-    transform: scale(0.98);
+    /* transform: scale(0.98); */
     z-index: 1;
   }
   
@@ -55,9 +53,13 @@
   .note-card .card-action > * {
     font-size: 0.8rem;
   }
-  
+  .primary-disabled{
+    color: white;
+    background-color: rgb(144, 144, 144);
+  }
   .note-card .card-time {
-    color: var(--status-offline);
+    color: black;
+    margin-left: 0.5rem;
   }
   
   .note-card .card-icons i,
@@ -70,7 +72,7 @@
   
   .note-card .card-icons i:hover,
   .note-card .card-badge i:hover {
-    background-color: var(--bg-secondary);
+    background-color: whitesmoke 20%;
   }
   
   .note-card .card-icons i > *,
@@ -83,7 +85,10 @@
     bottom: 0;
     left: 0;
   }
-  
+  .priority-field-wrapper,.color-pallete-wrapper{
+    position: relative;
+  }
+
   .note-card .card-content p img {
     width: 100%;
     height: auto;

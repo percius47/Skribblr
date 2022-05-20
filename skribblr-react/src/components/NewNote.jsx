@@ -25,7 +25,7 @@ const NewNote   = () => {
         onSubmit={submitForm}
         style={{ backgroundColor: input.bgColor }}
       >
-        <div className=" input input-primary">
+        <div className="input-rte">
           <input
             type="text"
             placeholder="Title"
@@ -35,14 +35,14 @@ const NewNote   = () => {
           />
         </div>
 
-        <div className=" input input-primary">
+        <div className=" input-rte input-primary">
           <RichTextEditor
             value={input.content}
             setValue={(e) => setInput({ ...input, content: e })}
           />
         </div>
 
-        <div className=" input input-primary">
+        <div className=" input-rte input-primary">
           <input
             type="text"
             placeholder="Add a label"
@@ -51,7 +51,7 @@ const NewNote   = () => {
           />
         </div>
 
-        <div className="form-footer">
+        <div className="form-footer input-rte">
           <div className="form-options">
             {/* note color */}
             <i
@@ -75,7 +75,7 @@ const NewNote   = () => {
             </button>
             <button
               type="submit"
-              className={`btn btn-primary ${
+              className={`btn-save ${
                 buttonDisabled ? "primary-disabled" : null
               }`}
               style={{
@@ -86,8 +86,10 @@ const NewNote   = () => {
               {noteExists || archiveExists ? "Save" : "Add"}
             </button>
           </div>
+          <div className="options">
           {showColorPallete ? <ColorPalette setInput={setInput} /> : null}
           {showPriorityField ? <PriorityBar/> : null}
+          </div>
         </div>
       </form>
     </div>

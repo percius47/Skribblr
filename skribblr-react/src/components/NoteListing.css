@@ -1,8 +1,12 @@
 .notes-wrapper {
     max-width: 25rem;
-    margin: 0 auto 1rem auto;
+padding: 1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin:  0 auto;
   }
-  
+  .center-text{
+      text-align: center;
+      margin: 1rem auto;
+  }

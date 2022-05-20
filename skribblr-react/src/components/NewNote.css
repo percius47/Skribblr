@@ -19,7 +19,7 @@
     z-index: 3;
   }
   
-  .note-form input,
+  .input-rte,
   .note-form textarea {
     font-size: 1rem;
     padding: 0.5rem;
@@ -27,19 +27,22 @@
     width: 100%;
     background-color: inherit;
   }
+  .input-rte input{
+    background-color: transparent;
+  }
   
   .note-form .note-input {
     display: flex;
   }
   
-  .note-form textarea {
+  /* .note-form textarea {
     resize: none;
     color: var(--text-color);
-  }
+  } */
   
-  .note-form .input-primary textarea:focus {
+  /* .note-form .input-primary textarea:focus {
     outline: none;
-  }
+  } */
   
   .note-form .form-action .close-btn {
     color: var(--primary-color);
@@ -54,10 +57,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  
-  .note-form .form-action button.primary-disabled {
-    background-color: var(--primary-disabled);
-  }
+
   
   .note-form .form-options {
     display: flex;
@@ -75,13 +75,7 @@
     color: var(--status-offline);
   }
   
-  .form-options i:hover {
-    background-color: var(--bg-secondary);
-  }
-  
-  .form-options i > * {
-    font-size: 1.3rem;
-  }
+ 
   
   .note-form .label-btn {
     position: relative;
@@ -91,4 +85,13 @@
     display: flex;
     justify-content: space-between;
   }
-  
+.btn-save{
+  color: var(--primary-color);
+  background-color: transparent;
+  padding: 0.25rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+}
+.close-btn{
+  background-color: transparent;
+}

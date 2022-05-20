@@ -1,0 +1,13 @@
+.component-container .label-wrapper {
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+  
+  .label-wrapper > * {
+    width: 100%;
+  }
+  .center-text{
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+  }

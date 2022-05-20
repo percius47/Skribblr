@@ -85,7 +85,7 @@ try {
     e.preventDefault();
 
     try {
-      console.log("login handler",login.input);
+   
       const { data } = await loginService(login.input);
       
       toast.success(`Welcome back, ${data.foundUser.username}!`, {
@@ -95,7 +95,7 @@ try {
       localStorage.setItem("isAuth", true);
       localStorage.setItem("token", data.encodedToken);
       setToken(data.encodedToken);
-      console.log("context",data.foundUser.username);
+     
       setUser(data.foundUser.username);
       setLogin({ ...login, input: { email: "", password: "" } });
       setIsAuth(true);

@@ -1,7 +1,7 @@
 .home-nav{
     background-color: var(--primary-color);
     display: flex;
-
+position: relative;
     justify-content: space-between;
     align-items: center;
 }
@@ -15,4 +15,56 @@
     cursor: pointer;
     color: white;
     padding:  1rem;
+}
+.search-box{
+    padding: 0.25rem 0.5rem;
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.nav-modal{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+    border-radius: 0.5rem;
+    color: white;
+    /* padding: 0.5rem; */
+    font-size: 0.8;
+}
+.nav-modal button{
+    background-color: transparent;
+    color: white;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    padding: 0.25rem;
+
+}
+.nav-modal p{
+    margin: 0.25rem;
+
+}
+.nav-modal label{
+    display: block;
+    margin: 0.25rem auto;
+    font-size: 0.65rem;
+    padding: 0.5rem;
+
+}
+.nav-modal input{
+    margin-right: 0.25rem;
+}
+.p-left{
+    margin-left: 0;
+}
+.txt-subtitle{
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 650px) {
+
+    .home-menu{
+        visibility: hidden;
+    }
 }

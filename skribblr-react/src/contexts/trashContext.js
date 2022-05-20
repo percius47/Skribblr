@@ -42,11 +42,11 @@ const TrashProvider = ({ children }) => {
 
     try {
       const { data, status } = await moveToTrashService(note, token);
-
+        console.log("traash data",data);
       if (status === 201) {
         toast.success("Note moved to Trash");
         dispatchNote({
-          type: "SET_NOTES_AND_TRASH",
+          type: "SET_NOTES_TRASH",
           payload: { notes: data.notes, trash: data.trash },
         });
       }
@@ -65,7 +65,7 @@ const TrashProvider = ({ children }) => {
       if (status === 200) {
         toast.success("Note restored");
         dispatchNote({
-          type: "SET_NOTES_AND_TRASH",
+          type: "SET_NOTES_TRASH",
           payload: { notes: data.notes, trash: data.trash },
         });
       }
@@ -87,7 +87,7 @@ const TrashProvider = ({ children }) => {
           type: "SET_TRASH",
           payload: data.trash,
         });
-      }
+      } 
     } catch (err) {
       toast.error("Error occured");
       console.error(err);

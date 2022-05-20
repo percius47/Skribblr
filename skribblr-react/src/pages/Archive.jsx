@@ -1,6 +1,7 @@
-import { NoteList, NoteInput } from "components";
-import { useNotes } from "contexts";
-
+import { NewNote } from "../components/NewNote";
+import { NoteListing } from "../components/NoteListing";
+import { useNotes } from "../contexts/notesContext";
+import  "./Archive.css"
 const Archive = () => {
   const {
     showInput,
@@ -9,8 +10,9 @@ const Archive = () => {
 
   return (
     <div className="component-container archive-container">
-      <NoteList notes={archives} />
-      {showInput ? <NoteInput /> : null}
+ 
+      <NoteListing notes={archives} />
+      {showInput ? <NewNote /> : null}
     </div>
   );
 };

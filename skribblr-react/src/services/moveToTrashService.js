@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const moveToTrashService = (note, token) => {
+  console.log("from trash",note);
   return axios.post(
     `/api/notes/trash/${note._id}`,
     { note },
