@@ -36,7 +36,7 @@ const NoteListing = ({ notes }) => {
             
           })
         ) : (
-          <p className="text-center">We don't have any notes to show here.</p>
+          <p className="center-text">We don't have any notes to show here.</p>
         )}
       </div>
     </div>

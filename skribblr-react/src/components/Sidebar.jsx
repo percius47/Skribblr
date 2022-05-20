@@ -40,7 +40,7 @@ const location = useLocation();
             <NavLink
               to="/label"
               activeClassName="active"
-              // className={({ isActive }) => (isActive ? "active" : undefined)}
+
             >
               <LabelIcon   className="sidebar-icons"/> <span>Labels</span>
             </NavLink>
@@ -61,7 +61,6 @@ const location = useLocation();
          <DeleteIcon   className="sidebar-icons"/> <span>Trash</span>
             </NavLink>
           </li>
-          {/*  */}
           <div className="mobile-nav">
      <li       
      className="mobile-nav-container"
@@ -210,7 +209,7 @@ className="mobile-nav-container"
         <span>Logout</span>
 </li>
 </div>
-          {/*  */}
+       
         </ul>
 
         <div className="profile">

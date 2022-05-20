@@ -36,7 +36,7 @@ const Label = () => {
           );
         })
       ) : (
-        <p className="text-center">No labels added!</p>
+        <p className="center-text">No labels added!</p>
       )}
 
       {showInput ? <NewNote /> : null}
