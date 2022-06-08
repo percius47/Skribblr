@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import "./HomeNav.css"
 import {NavLink, useLocation} from "react-router-dom"
-
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import TuneRoundedIcon from '@mui/icons-material/TuneRounded';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import CategoryIcon from '@mui/icons-material/Category';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import { useAuth } from '../contexts/authContext';
 import { useNotes } from '../contexts/notesContext';
 import SearchBar from './SearchBar';
@@ -31,23 +33,38 @@ const location = useLocation();
        <div className="search-box">
        <SearchBar  />
        </div>
-      
-      <div className="home-menu">
-<CategoryIcon className='menu-icon'
-  onClick={() => {
-    setShowFilterModal((show) => !show)}}
-/>
-{showFilterModal ? (
-              <div className="nav-modal">
-                <button
+       <div className="menu">
+      <div className="filters">
+        
+      <input type="checkbox" id="click" style={{display:'none'}}/>
+
+<label  for="click">
+            <a ><TuneRoundedIcon className='menu-icon'/></a>
+          </label>
+
+        
+        
+            {/* modal content */}
+            <div className="nav-modal __modal">
+            <div className="close-div">
+            <button
+       
                   onClick={() =>
                     setNotesOrder(() => ({ sort: "", filter: "" }))
                   }
                 >
-                  Clear
+                  Clear Filters
                 </button>
+
+       <div>
+       <label  for="click" >
+          <a ><CloseRoundedIcon/></a>
+        </label>
+       </div>
+     </div>
+        
                 <p>Sort By</p>
-                {/* SortModal  */}
+           
                 <div className="input-group" onClick={(e) => e.stopPropagation()}>
         <p className="txt-subtitle">Date</p>
         <label>
@@ -101,7 +118,7 @@ const location = useLocation();
         </label>
       </div>
                 <p>Filter By</p>
-                {/* FilterModal  */}
+            
                 <div className="input-group" onClick={(e) => e.stopPropagation()}>
         <p className="txt-subtitle">Priority</p>
         <label>
@@ -145,20 +162,21 @@ const location = useLocation();
         </label>
       </div>
               </div>
-            ) : null}
-        <AddBoxIcon className='menu-icon'
-        onClick={()=>{
-          setShowInput(true);
-              setIsEditing(true);
-            
-              setInput(formInputs);}}
-        />
-
-        <LogoutIcon className='menu-icon' 
+           
+      
+         
+          <div class="modal__overlay"></div>
+      </div>
+      <LogoutIcon className='menu-icon' 
         onClick={logoutHandler}
         />
+      </div>
 
-</div>
+    
+
+      
+
+
 </div>
 
   )

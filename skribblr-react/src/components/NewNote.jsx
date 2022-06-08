@@ -28,6 +28,7 @@ const NewNote   = () => {
         <div className="input-rte">
           <input
             type="text"
+            className="text-rte"
             placeholder="Title"
             value={input.title}
             onChange={(e) => setInput({ ...input, title: e.target.value })}
@@ -44,6 +45,7 @@ const NewNote   = () => {
 
         <div className=" input-rte input-primary">
           <input
+          className="text-rte"
             type="text"
             placeholder="Add a label"
             value={input.tags}

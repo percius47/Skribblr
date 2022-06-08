@@ -9,13 +9,14 @@ import { NoteListing } from "../components/NoteListing";
 function Home() {
   const {
     noteState: { notes },
-    showInput,
+    showInput,setShowInput, setIsEditing, setInput, formInputs,
   } = useNotes();
 
   return (
     <div className="component-container home-container">
       {showInput ? <NewNote /> : null}
-
+     
+    
       <NoteListing notes={notes} />
     </div>
   );

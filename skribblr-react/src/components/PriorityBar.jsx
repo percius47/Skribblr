@@ -27,7 +27,7 @@ const PriorityBar = ({ note }) => {
           }
           onChange={(e) => handlePriority({ Low: e.target.value })}
         />{" "}
-        Low
+        LOW
       </label>
       <label>
         <input
@@ -39,7 +39,7 @@ const PriorityBar = ({ note }) => {
           }
           onChange={(e) => handlePriority({ Medium: e.target.value })}
         />{" "}
-        Medium
+        MED
       </label>
       <label>
         <input
@@ -51,7 +51,7 @@ const PriorityBar = ({ note }) => {
           }
           onChange={(e) => handlePriority({ High: e.target.value })}
         />{" "}
-        High
+        HIGH
       </label>
     </div>
   );

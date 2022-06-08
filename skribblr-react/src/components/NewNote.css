@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 4;
   }
   
   .input-rte,
@@ -35,14 +35,21 @@
     display: flex;
   }
   
-  /* .note-form textarea {
+  .note-form textarea {
     resize: none;
     color: var(--text-color);
-  } */
-  
-  /* .note-form .input-primary textarea:focus {
+  }
+  .text-rte:focus{
+    transition: 0.2s ease;
+    padding: 0.25rem;
+    border: none !important;
+  }
+
+
+  .note-form .input-primary textarea:focus {
     outline: none;
-  } */
+    border: none;
+  }
   
   .note-form .form-action .close-btn {
     color: var(--primary-color);
@@ -72,7 +79,7 @@
     margin: 0 0.35rem;
     padding: 0.1rem 0.2rem;
     border-radius: 50%;
-    color: var(--status-offline);
+    color: var(--primary-color);
   }
   
  
@@ -86,12 +93,15 @@
     justify-content: space-between;
   }
 .btn-save{
-  color: var(--primary-color);
-  background-color: transparent;
+  color: white;
+  background-color: var(--primary-color);
   padding: 0.25rem;
-  border: 1px solid var(--primary-color);
+
   border-radius: 0.25rem;
 }
 .close-btn{
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--primary-color);
   background-color: transparent;
 }

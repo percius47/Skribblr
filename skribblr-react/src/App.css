@@ -18,8 +18,19 @@ cursor: pointer;
     color: var(--text-color);
     margin-bottom: 3rem;
 }
+.addnotes-icon{
+    position: fixed;
+    bottom: 4.5rem;
+    right: 1rem;
+    color: var(--primary-color);
+  }
 @media screen and (max-width: 650px) {
     .main-section{
         display: block;
+    }
+    .addnotes-icon{
+        z-index: 3;
+       background-color: white;
+       border-radius: 50%;
     }
 }

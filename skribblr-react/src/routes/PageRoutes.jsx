@@ -9,12 +9,17 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import { PrivateRoute } from './PrivateRoutes'
-
+import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import { Trash } from '../pages/Trash'
 import { Label } from '../pages/Label'
 import { Archive } from '../pages/Archive'
+import { useNotes } from '../contexts/notesContext'
 function PageRoutes() {
   const { isAuth } = useAuth();
+  const {
+    noteState: { notes },
+    showInput,setShowInput, setIsEditing, setInput, formInputs,
+  } = useNotes();
   return (
     <div>
     {!isAuth ? (
@@ -27,6 +32,13 @@ function PageRoutes() {
       </div>
     ) : (
       <div className="page-wrapper">
+        <AddCircleRoundedIcon sx={{fontSize:50}} className='addnotes-icon'
+        onClick={()=>{
+          setShowInput(true);
+              setIsEditing(true);
+            
+              setInput(formInputs);}}
+        />
         <HomeNav />
 
         <section className="main-section">
