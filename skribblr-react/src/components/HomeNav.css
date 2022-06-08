@@ -25,9 +25,9 @@ position: relative;
 }
 
 .nav-modal{
-    position: absolute;
+    /* position: absolute;
     top: 3rem;
-    right: 3rem;
+    right: 3rem; */
 background-color: var(--primary-color);
 color: white;
  /* color: var(--primary-color); */
@@ -63,7 +63,7 @@ color: white;
 }
 .menu{
     display: flex;
-    
+
 }
 .txt-subtitle{
     font-size: 0.75rem;
@@ -124,10 +124,7 @@ color: white;
 
 @media screen and (max-width: 650px) {
 
-    .home-nav{
-   
-        padding: 0.5rem;
-    }
+  
     .home-menu,.search-box{
         /* visibility: hidden; */
         display: none;

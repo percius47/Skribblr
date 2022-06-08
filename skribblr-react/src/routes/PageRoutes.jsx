@@ -1,7 +1,7 @@
 import React from 'react'
 import "../App.css"
 import { Navigate, Route, Routes } from 'react-router-dom'
-import Footer from '../components/Footer'
+
 import HomeNav from '../components/HomeNav'
 import { Sidebar } from '../components/Sidebar'
 import { useAuth } from '../contexts/authContext'
@@ -17,8 +17,8 @@ import { useNotes } from '../contexts/notesContext'
 function PageRoutes() {
   const { isAuth } = useAuth();
   const {
-    noteState: { notes },
-    showInput,setShowInput, setIsEditing, setInput, formInputs,
+   
+   setShowInput, setIsEditing, setInput, formInputs,
   } = useNotes();
   return (
     <div>

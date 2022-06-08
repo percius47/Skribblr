@@ -1,25 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./HomeNav.css"
-import {NavLink, useLocation} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import TuneRoundedIcon from '@mui/icons-material/TuneRounded';
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import CategoryIcon from '@mui/icons-material/Category';
+
 import LogoutIcon from '@mui/icons-material/Logout';
-import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+
 import { useAuth } from '../contexts/authContext';
 import { useNotes } from '../contexts/notesContext';
 import SearchBar from './SearchBar';
 // height 5rem
 function HomeNav() {
   const { logoutHandler } = useAuth();
-  const { setShowInput, setIsEditing, setInput, formInputs,notesOrder,setNotesOrder } =
+  const {notesOrder,setNotesOrder } =
   useNotes();
  
-const [showFilterModal, setShowFilterModal] = useState(false);
 
 
-const location = useLocation();
+
+
 
   return (
 
