@@ -24,7 +24,7 @@ const [showFilterModal, setShowFilterModal] = useState(false);
 const location = useLocation();
 
   return (
-    <section className="wrapper">
+
       <aside>
         <ul>
           <li>
@@ -61,7 +61,7 @@ const location = useLocation();
          <DeleteIcon   className="sidebar-icons"/> <span>Trash</span>
             </NavLink>
           </li>
-          <div className="mobile-nav">
+          {/* <div className="mobile-nav">
      <li       
      className="mobile-nav-container"
      activeClassName="active">  
@@ -208,16 +208,16 @@ className="mobile-nav-container"
         />
         <span>Logout</span>
 </li>
-</div>
+</div> */}
        
         </ul>
 
-        <div className="profile">
+        {/* <div className="profile">
         <PersonIcon className="user-icon"/>
         {user}
-        </div>
+        </div> */}
       </aside>
-    </section>
+   
   );
 };
 

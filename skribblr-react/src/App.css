@@ -18,3 +18,8 @@ cursor: pointer;
     color: var(--text-color);
     margin-bottom: 3rem;
 }
+@media screen and (max-width: 650px) {
+    .main-section{
+        display: block;
+    }
+}

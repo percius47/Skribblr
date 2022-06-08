@@ -64,7 +64,12 @@ position: relative;
 
 @media screen and (max-width: 650px) {
 
-    .home-menu{
-        visibility: hidden;
+    .home-nav{
+        display: block;
+        padding: 0.5rem;
+    }
+    .home-menu,.search-box{
+        /* visibility: hidden; */
+        display: none;
     }
 }

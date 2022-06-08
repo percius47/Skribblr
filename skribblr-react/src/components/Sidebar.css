@@ -8,16 +8,20 @@ aside {
   }
   li{
     list-style-type: none;
-   
+  
 
   }
   li span{
    margin: auto;
   }
   aside a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+ 
     width: 100%;
     border-radius: var(--border-radius);
+    margin: 0.5rem 0;
+    padding: 0.25rem 0;
   }
   
   aside a.active {
@@ -25,16 +29,10 @@ aside {
 font-size: 1.2rem;
   }
   
-  aside a,
-  aside .profile {
-    margin: 0.5rem;
-    padding: 0.25rem;
-  }
-  
-  aside .sidebar-icons {
-    margin: auto;
-    margin-right: 0.5rem;
 
+
+  aside .sidebar-icons {
+    margin-right: 0.5rem;
   }
   
   aside button {
@@ -47,8 +45,8 @@ font-size: 1.2rem;
     font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    padding:  0.25rem;
+ justify-content: space-evenly;
+    padding:  0.5rem;
   }
   
   /* navbar icons */
@@ -69,6 +67,7 @@ font-size: 1.2rem;
       margin: 0  0.5rem;
 
     }
+   
     .mobile-nav-container{
       display: flex;
       flex-direction: column;
@@ -102,18 +101,22 @@ font-size: 1.2rem;
       background-color: var(--primary-color);
       z-index: 2;
     }
+    
   
     aside ul {
       display: flex;
+      width: 100%;
+      justify-content: space-around;
     }
   
     aside a {
       display: flex;
       flex-direction: column;
+
       align-items: center;
-      margin: 0 0.25rem;
+      /* margin: 0 0.25rem; */
       font-size: 0.9rem;
-      padding: 0.5rem ;
+      /* padding: 0.5rem ; */
     }
   
     aside .sidebar-icons {
@@ -121,16 +124,16 @@ font-size: 1.2rem;
     }
   
     aside .profile {
+
       display: flex;
       flex-direction: column;
       align-items: center;
+        justify-content: space-evenly;
       margin: 0 0.25rem;
       font-size: 0.9rem;
       padding: 0.5rem ;
     }
-  .user-icon{
-    padding: 0 0.25rem ;
-  }
+  
    
   }
   
