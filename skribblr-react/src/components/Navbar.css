@@ -11,8 +11,15 @@
     --secondary-blue:#0C00CB;
     font-family: 'Quicksand', sans-serif;
 }
-.nav{
-  height: 3rem !important;
+.__nav{
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: row;
+ 
+  flex-wrap: wrap;
+
+  height: 3rem ;
   justify-content: space-between !important;
 }
 .logo-title {
@@ -27,3 +34,10 @@
   color: white;
   padding: 1rem;
 }
+
+@media screen and (max-width: 460px){
+.__nav {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}}

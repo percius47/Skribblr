@@ -1,12 +1,12 @@
 @import url('../App.css');
 
 .home-parent{
-    /* margin-top: 2.5rem; */
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .home-parent div{
-    /* text-align: center; */
+  
     margin: 0 auto;
 }
 
@@ -102,4 +102,11 @@
  .signup-link{
 font-weight: 600;
 text-decoration: underline;
+}
+
+@media screen and (max-width: 640px){
+.home-parent{
+    display: block;
+}
+
 }
