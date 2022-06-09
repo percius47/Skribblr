@@ -35,9 +35,9 @@ const PriorityBar = ({ note }) => {
           name="priority"
           value="2"
           checked={
-            note ? note.priority.Medium === "2" : input.priority.Medium === "2"
+            note ? note.priority.Med === "2" : input.priority.Med === "2"
           }
-          onChange={(e) => handlePriority({ Medium: e.target.value })}
+          onChange={(e) => handlePriority({ Med: e.target.value })}
         />{" "}
         MED
       </label>

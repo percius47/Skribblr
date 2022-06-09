@@ -74,6 +74,19 @@ color: white;
     align-items: center;
     justify-content: space-between;
 }
+.close-div button{
+    border: 1px solid white;
+    border-radius: 0.25rem;
+}
+.__modal p{
+    margin-left: 0.5rem;
+}
+.input-group{
+    margin: 0.25rem 0.75rem;
+}
+.input-group input{
+    accent-color: var(--primary-color);
+}
 /* modal */
 
 .button{

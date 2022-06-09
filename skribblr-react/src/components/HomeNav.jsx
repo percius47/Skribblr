@@ -48,7 +48,7 @@ function HomeNav() {
             <div className="nav-modal __modal">
             <div className="close-div">
             <button
-       
+                    
                   onClick={() =>
                     setNotesOrder(() => ({ sort: "", filter: "" }))
                   }
