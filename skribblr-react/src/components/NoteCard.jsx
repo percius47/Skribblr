@@ -1,13 +1,6 @@
 import "./NoteCard.css";
 import { useState } from "react";
-// import {
 
-
-//   DeleteOutlinedIcon,
-
-//   DeleteForeverOutlinedIcon,
-
-// } from "assets/index";
 import DeleteIcon from '@mui/icons-material/Delete';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import RestoreIcon from '@mui/icons-material/Restore';
@@ -61,7 +54,9 @@ const NoteCard = ({ note }) => {
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
           {tags.length > 0 ? (
-            <div className="card-label">{tags[0]} </div>
+            <div className="card-label"><span>
+               Label: {tags[0]} 
+              </span></div>
           ) : null}
         </div>
 
@@ -71,14 +66,14 @@ const NoteCard = ({ note }) => {
       </div>
 
       <div
-        className="card-action"
+        className=" card-action"
         style={{ visibility: showCardOptions ? "visible" : "hidden" }}
       >
         <div className="card-time">{createdTime}</div>
 
         <div className="card-icons">
           {!inTrash && (
-            <span>
+          <span>
               <i
                 role="button"
                 onClick={(e) => {
@@ -99,8 +94,9 @@ const NoteCard = ({ note }) => {
               >
                 <FilterListIcon />
               </i>
-            </span>
-          )}
+              </span>
+            
+           )} 
           {!inTrash && (
             <i role="button">
               {inArchive ? (
@@ -111,7 +107,7 @@ const NoteCard = ({ note }) => {
                 <ArchiveIcon  onClick={(e) => archiveNote(e, note)} />
               )}
             </i>
-          )}
+           )} 
           <i role="button">
             {inTrash ? (
               <RestoreIcon
@@ -131,9 +127,11 @@ const NoteCard = ({ note }) => {
                 onClick={(e) => deleteFromTrash(e, note)}
               />
             </i>
-          )}
+           )} 
         </div>
       </div>
+    
+     
       <div className="color-pallete-wrapper">
         {showColorPallete ? <ColorPalette note={note} /> : null}
       </div>

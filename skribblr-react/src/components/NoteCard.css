@@ -33,15 +33,16 @@
     text-transform: uppercase;
   }
   
-  .note-card.card-w-badge .card-badge {
+  /* .note-card .card-w-badge  */
+  .card-badge {
     all: unset;
     margin: 0.75rem 0.75rem 0 0;
     padding: 0.1rem;
     font-size: 0.7rem;
     height: max-content;
-    color: var(--text-secondary);
-    border: 1px solid var(--text-color);
-    border-radius: var(--border-radius);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.25rem;
   }
   
   .note-card .card-action {
@@ -50,16 +51,20 @@
     justify-content: space-between;
   }
   
-  .note-card .card-action > * {
-    font-size: 0.8rem;
-  }
+ 
   .primary-disabled{
     color: white;
     background-color: rgb(144, 144, 144);
   }
-  .note-card .card-time {
-    color: black;
-    margin-left: 0.5rem;
+  
+  .card-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-icons span{
+    display: flex;
+    justify-content: space-between;
   }
   
   .note-card .card-icons i,
@@ -67,13 +72,10 @@
     margin: 0 0.35rem;
     padding: 0.25rem;
     border-radius: 50%;
-    color: var(--status-offline);
+    color: var(--primary-color);
   }
   
-  .note-card .card-icons i:hover,
-  .note-card .card-badge i:hover {
-    background-color: whitesmoke 20%;
-  }
+ 
   
   .note-card .card-icons i > *,
   .note-card .card-badge i > * {
@@ -90,11 +92,20 @@
   }
 
   .note-card .card-content p img {
+    margin: 0.5rem;
     width: 100%;
     height: auto;
   }
-  
-  @media screen and (max-width: 450px) {
+  .card-time{
+    font-size: 0.7rem;
+
+    margin: 0.25rem auto;
+  }
+
+  /* mobile action */
+
+
+  @media screen and (max-width: 650px) {
     .note-card .card-action {
       flex-direction: column;
       flex-wrap: wrap;
@@ -102,11 +113,20 @@
     }
   
     .note-card .card-time {
-      margin: 0 0 0.25rem 0.25rem;
+      margin:  0.5rem;
+     
     }
   
     .note-card .card-icons i {
       margin: 0 0.5rem 0 0;
     }
-  }
+
+
+    .card-badge{
+
+      margin: 0.25rem 0.25rem 0 0;
+      padding: 0.15rem;
+      font-size: 0.6rem;
+    }
   
+  }
