@@ -87,6 +87,9 @@ color: white;
 .input-group input{
     accent-color: var(--primary-color);
 }
+.search-input:focus-visible{
+    outline: none;
+}
 /* modal */
 
 .button{
@@ -139,7 +142,7 @@ color: white;
 
   
     .home-menu,.search-box{
-        /* visibility: hidden; */
+
         display: none;
     }
 }

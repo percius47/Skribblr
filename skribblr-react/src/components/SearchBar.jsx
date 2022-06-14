@@ -17,7 +17,8 @@ function SearchBar() {
     return (
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Search note titles.."
+        className="search-input"
         value={searchVal}
         onChange={(e) => {
           setNotesOrder(() => ({ sort: "", filter: "" }));
